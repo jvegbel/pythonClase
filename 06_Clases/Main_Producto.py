@@ -2,6 +2,7 @@ from Producto import Producto
 # Instanciación de dos objetos independientes
 producto1 = Producto("Camiseta", 25.99)
 producto2 = Producto("Pantalón", 39.99)
+print(producto1.calidad)
 
 # Lectura estándar mediante notación de punto
 print(producto1.nombre)  # Salida: Camiseta
