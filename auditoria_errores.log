@@ -1,0 +1,6 @@
+2026-11-20 01:10:12,504 - ERROR - Error crítico durante el cálculo de división en el sistema.
+Traceback (most recent call last):
+  File "/home/jvega/python/07_Excepciones/EjemploExcepciones01.py", line 30, in realizar_division
+    resultado = dividendo / divisor
+                ~~~~~~~~~~^~~~~~~~~
+ZeroDivisionError: division by zero
