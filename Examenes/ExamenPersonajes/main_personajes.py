@@ -68,10 +68,53 @@ if __name__ == "__main__":
     # Prueba de métodos heredados y polimorfismo
     print("\n--- Prueba de métodos de clase ---")
     todos_los_personajes = elfos + hombres
-    if todos_los_personajes:
-        # Subimos de nivel al primer Elfo y al primer Hombre
-        print(elfos[0].subir_nivel())
-        print(elfos[0])
-        
-        print(hombres[0].subir_nivel())
-        print(hombres[0])
+
+    todos_los_personajes = elfos + hombres
+
+    if not todos_los_personajes:
+        print("No hay personajes disponibles para mostrar.")
+    else:
+        for personaje in todos_los_personajes:
+            print(personaje.subir_nivel())
+            print(personaje)
+
+    # Si quiero subir de nivel al primer elfo y el primer hombre, todos_los_personajes:
+
+    print("\n--- Prueba de polimorfismo con todos los personajes ---")
+    
+    elfo_actualizado = False
+    hombre_actualizado = False
+
+    for personaje in todos_los_personajes:
+        if isinstance(personaje, Elfo) and not elfo_actualizado:
+            print(personaje.subir_nivel())
+            print(personaje)
+            elfo_actualizado = True
+            
+        elif isinstance(personaje, Hombre) and not hombre_actualizado:
+            print(personaje.subir_nivel())
+            print(personaje)
+            hombre_actualizado = True
+
+        # Optimización: si ya encontramos y actualizamos a ambos, salimos del bucle
+        if elfo_actualizado and hombre_actualizado:
+            break
+   
+   
+   
+
+                            
+                   
+                            
+                   
+                            
+                   
+                            
+                   
+                            
+                   
+                            
+                   
+                            
+                   
+                            
